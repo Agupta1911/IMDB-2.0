@@ -3,7 +3,7 @@ import SearchBar from "./components/SearchBar"
 import MovieList from "./components/MovieList"
 import MovieDisplay from "./components/MovieDisplay"
 import StarRating from "./components/StarRating"
-import { BrainIcon, EyeIcon, AudioIcon, GitHubIcon } from "./components/CustomIcons"
+import { BrainIcon, EyeIcon, AudioIcon, GitHubIcon, PopcornIcon } from "./components/CustomIcons"
 import "./styles/App.css"
 
 function App() {
@@ -126,8 +126,8 @@ function App() {
             <GitHubIcon size={24} />
           </a>
           <div className="popcorn-decorations">
-            <img src="/icons/popcorn.png" className="popcorn-left" alt="Popcorn" />
-            <img src="/icons/popcorn.png" className="popcorn-right" alt="Popcorn" />
+            <PopcornIcon className="popcorn-left" size={48} />
+            <PopcornIcon className="popcorn-right" size={48} />
           </div>
         </div>
       ) : (
