@@ -196,7 +196,10 @@ function App() {
                         onChange={(e) => {
                           const newValue = parseFloat(e.target.value)
                           const remaining = 1 - newValue
-                          const visualRatio = weights.visual / (weights.visual + weights.audio)
+                          let visualRatio = 0.5
+                          if (weights.visual + weights.audio > 0) {
+                            visualRatio = weights.visual / (weights.visual + weights.audio)
+                          }
                           handleWeightChange({
                             narrative: newValue,
                             visual: remaining * visualRatio,
@@ -219,7 +222,10 @@ function App() {
                         onChange={(e) => {
                           const newValue = parseFloat(e.target.value)
                           const remaining = 1 - newValue
-                          const narrativeRatio = weights.narrative / (weights.narrative + weights.audio)
+                          let narrativeRatio = 0.5
+                          if (weights.narrative + weights.audio > 0) {
+                            narrativeRatio = weights.narrative / (weights.narrative + weights.audio)
+                          }
                           handleWeightChange({
                             visual: newValue,
                             narrative: remaining * narrativeRatio,
@@ -242,7 +248,10 @@ function App() {
                         onChange={(e) => {
                           const newValue = parseFloat(e.target.value)
                           const remaining = 1 - newValue
-                          const narrativeRatio = weights.narrative / (weights.narrative + weights.visual)
+                          let narrativeRatio = 0.5
+                          if (weights.narrative + weights.visual > 0) {
+                            narrativeRatio = weights.narrative / (weights.narrative + weights.visual)
+                          }
                           handleWeightChange({
                             audio: newValue,
                             narrative: remaining * narrativeRatio,
