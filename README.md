@@ -2,6 +2,8 @@
 
 An intelligent movie recommendation system that analyzes movie trailers using OpenAI's CLIP model to find visually and thematically similar films. Features a modern React UI with fuzzy search and explainable AI recommendations.
 
+<img width="2048" height="1175" alt="image" src="https://github.com/user-attachments/assets/72d2ed5c-521d-4e0e-abc8-bd894b239530" />
+
 ## Features
 
 ### Backend (Python)
@@ -196,3 +198,4 @@ MIT
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
